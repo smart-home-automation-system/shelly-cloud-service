@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: shelly-cloud-service
+    version: @project.version@
+  profiles:
+    active: home
+  webflux:
+    base-path: "/home/shelly"
+
+server:
+  port: 6200
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-discovery:6000/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+shelly:
+  cloud:
+    host: 10.78.30.20
+    token: dummy-token
+
+logbook:
+  format:
+    style: http
+
+logging:
+  level:
+    org.zalando.logbook: trace
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+server:
+  port: 6008
+management:
+  server:
+    port: 8008
+
+eureka:
+  client:
+    enabled: false
