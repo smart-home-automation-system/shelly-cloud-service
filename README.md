@@ -11,7 +11,7 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/smart-home-automation-system/shelly-cloud-service?style=plastic)
 ![Java](https://img.shields.io/badge/java-21-yellow?style=plastic)
-![SpringBoot](https://img.shields.io/badge/SpringBoot-4.1.0-blue?style=plastic)
+![SpringBoot](https://img.shields.io/badge/SpringBoot-4.1.1-blue?style=plastic)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=smart-home-automation-system_shelly-cloud-service&metric=coverage)](https://sonarcloud.io/summary/new_code?id=smart-home-automation-system_shelly-cloud-service)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=smart-home-automation-system_shelly-cloud-service&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=smart-home-automation-system_shelly-cloud-service)
 
@@ -32,7 +32,7 @@ cloud, for the cases the local API cannot serve.
 
 **Status: skeleton.** The service builds, starts and exposes its Actuator, but implements no
 functionality yet — there are no endpoints and no Shelly cloud calls. It runs on the target
-toolchain (Java 21 / Spring Boot 4.1.0) and on the org's observability scheme, so the first
+toolchain (Java 21 / Spring Boot 4.1.1) and on the org's observability scheme, so the first
 feature lands on a finished foundation.
 
 ## Run locally
