@@ -35,9 +35,11 @@ review.
   without the secret fails at startup instead of calling the cloud with `dummy-token`.
 - Build every `WebClient` from the injected `WebClient.Builder` — an own builder bean is not
   instrumented, and the outgoing call drops out of the trace.
-- The service has no `spring-boot-starter-validation`. The English Bean Validation messages of
-  `cholewa-commons` apply once it is added; the consumer's part is then a `@SpringBootTest` on
-  a Polish JVM expecting English (see the org context).
+- Bean Validation is already on the classpath — `cholewa-commons` brings
+  `spring-boot-starter-validation` — and the library's English validation messages are on, with
+  nothing to act on: there is no constraint anywhere. The first validated input brings the
+  consumer-side locale test described in `organization.md` (a `@SpringBootTest` on a Polish
+  JVM expecting English, plus a control with the property switched off).
 - A scheduled job that calls the cloud must not run in a test context: `@EnableScheduling` on
   a configuration class under `@Profile("!test")`, as in `boiler-service`.
 
